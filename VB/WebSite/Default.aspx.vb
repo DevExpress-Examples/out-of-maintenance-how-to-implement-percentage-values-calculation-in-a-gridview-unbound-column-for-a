@@ -12,7 +12,7 @@ Imports System.Web.UI.HtmlControls
 
 Partial Public Class _Default
 	Inherits System.Web.UI.Page
-	Protected Sub grid_CustomUnboundColumnData(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewColumnDataEventArgs)
+	Protected Sub grid_CustomUnboundColumnData(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewColumnDataEventArgs)
 		If e.Column.FieldName = "percent" Then
 			If (grid.GroupCount > 0) Then
 				Dim itemKeyValue As String = e.GetListSourceFieldValue("ProductID").ToString()
